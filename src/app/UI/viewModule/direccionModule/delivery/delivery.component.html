@@ -1,0 +1,26 @@
+<<p>Dirección</p>>
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <select class="form-select" aria-label="Default select example" [formControl]="departament">
+                <option *ngfor="let departament of departaments"  (click)="getCitiesBydepartamentId()">{{departament.name}}</option>
+            </select>
+        </div>
+        <div class="col-6">
+            <select class="form-select" aria-label="Default select example" [formControl]="city">
+                <option *ngfor="let city of cities">{{city.name}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <input id="addres" type="text" placeholder="Dirreccion" [formControl]="addres">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <button class="btn btn-primary">Guardar</button>
+        </div>
+    </div>
+</div>
+   

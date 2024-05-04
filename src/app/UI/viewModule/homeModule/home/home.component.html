@@ -1,0 +1,18 @@
+
+<button type="btn btn-primary" (clic)="createAddres()">Direccion</button>
+<button type="btn btn-primary" (clic)="createDeliverDate()">Fecha de entrega</button>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Dirrección</th>
+            <th>Fecha de entrega</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let addres of addresses">
+            <td>{{addres.addres}}</td>
+            <td>{{addres.deliverDate}}</td>
+        </tr>
+    </tbody>
+</table>
